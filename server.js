@@ -24,6 +24,8 @@ const ai = new GoogleGenAI({
     apiKey: process.env.GEMINI_API_KEY
 });
 
+app.use('/marked',express.static(path.join(__dirname, 'node_modules/marked')));
+
 app.use(express.json({ limit: "20kb" }));
 
 // Serve frontend
