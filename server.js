@@ -1,6 +1,6 @@
 
 import express from "express";
-import {marked} from 'mzrked';
+import {marked} from 'marked';
 import dotenv from "dotenv";
 import { GoogleGenAI } from "@google/genai";
 import path from "node:path";
