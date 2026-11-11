@@ -13,8 +13,8 @@ const PORT = process.env.PORT || 3000;
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const PRIMARY_MODEL = process.env.GEMINI_MODEL || "gemini-3.0-flash";
-const FALLBACK_MODEL = process.env.GEMINI_FALLBACK_MODEL || "gemini-3.0-flash";
+const PRIMARY_MODEL = process.env.GEMINI_MODEL || "gemini-3.8-flash";
+const FALLBACK_MODEL = process.env.GEMINI_FALLBACK_MODEL || "gemini-3.7-flash";
 
 if (!process.env.GEMINI_API_KEY) {
     console.error("Missing GEMINI_API_KEY in .env");
