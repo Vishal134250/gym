@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,9 +14,7 @@
       --muted: #9da69a;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -34,19 +31,9 @@
       border-bottom: 1px solid #252b22;
     }
 
-    .logo {
-      font-size: 24px;
-      font-weight: 900;
-    }
-
-    .logo span {
-      color: var(--green);
-    }
-
-    .status {
-      color: var(--green);
-      font-size: 13px;
-    }
+    .logo { font-size: 24px; font-weight: 900; }
+    .logo span { color: var(--green); }
+    .status { color: var(--green); font-size: 13px; }
 
     main {
       max-width: 1100px;
@@ -54,10 +41,7 @@
       padding: 45px 20px;
     }
 
-    .hero {
-      text-align: center;
-      margin-bottom: 35px;
-    }
+    .hero { text-align: center; margin-bottom: 35px; }
 
     .tag {
       color: var(--green);
@@ -66,19 +50,9 @@
       font-weight: bold;
     }
 
-    h1 {
-      font-size: clamp(34px, 6vw, 58px);
-      margin: 18px 0;
-    }
-
-    h1 span {
-      color: var(--green);
-    }
-
-    .hero p {
-      color: var(--muted);
-      line-height: 1.7;
-    }
+    h1 { font-size: clamp(34px, 6vw, 58px); margin: 18px 0; }
+    h1 span { color: var(--green); }
+    .hero p { color: var(--muted); line-height: 1.7; }
 
     .layout {
       display: grid;
@@ -94,31 +68,12 @@
       padding: 24px;
     }
 
-    h2 {
-      font-size: 19px;
-      margin-top: 0;
-    }
+    h2 { font-size: 19px; margin-top: 0; }
 
-    .feature {
-      padding: 15px 0;
-      border-bottom: 1px solid #2a3025;
-    }
-
-    .feature:last-child {
-      border-bottom: 0;
-    }
-
-    .feature strong {
-      display: block;
-      margin-bottom: 7px;
-    }
-
-    .feature p {
-      color: var(--muted);
-      line-height: 1.5;
-      font-size: 14px;
-      margin: 0;
-    }
+    .feature { padding: 15px 0; border-bottom: 1px solid #2a3025; }
+    .feature:last-child { border-bottom: 0; }
+    .feature strong { display: block; margin-bottom: 7px; }
+    .feature p { color: var(--muted); line-height: 1.5; font-size: 14px; margin: 0; }
 
     .chat-heading {
       display: flex;
@@ -127,10 +82,7 @@
       gap: 10px;
     }
 
-    .chat-heading p {
-      color: var(--muted);
-      font-size: 13px;
-    }
+    .chat-heading p { color: var(--muted); font-size: 13px; }
 
     #messages {
       height: 330px;
@@ -146,28 +98,39 @@
       padding: 13px 15px;
       border-radius: 12px;
       line-height: 1.6;
-      white-space: pre-wrap;
       overflow-wrap: anywhere;
       font-size: 14px;
     }
 
-    .bot {
-      align-self: flex-start;
-      background: #252c20;
+    .user { white-space: pre-wrap; }
+
+    /* Markdown inside bot messages */
+    .bot > :first-child { margin-top: 0; }
+    .bot > :last-child { margin-bottom: 0; }
+    .bot p { margin: 0 0 10px; }
+    .bot ul, .bot ol { margin: 0 0 10px; padding-left: 22px; }
+    .bot li { margin-bottom: 4px; }
+    .bot h1, .bot h2, .bot h3, .bot h4 {
+      font-size: 15px;
+      margin: 12px 0 6px;
+      color: var(--green);
     }
 
-    .user {
-      align-self: flex-end;
+    .bot { align-self: flex-start; background: #252c20; }
+    .user { align-self: flex-end; background: var(--green); color: #12170d; }
+
+    .retry {
+      margin-top: 10px;
       background: var(--green);
-      color: #12170d;
+      color: #11150d;
+      border: none;
+      border-radius: 8px;
+      padding: 8px 14px;
+      font-weight: bold;
+      cursor: pointer;
     }
 
-    .quick {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 8px 0 18px;
-    }
+    .quick { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 18px; }
 
     .quick button {
       background: transparent;
@@ -178,10 +141,7 @@
       cursor: pointer;
     }
 
-    .quick button:hover {
-      border-color: var(--green);
-      color: var(--green);
-    }
+    .quick button:hover { border-color: var(--green); color: var(--green); }
 
     form {
       display: flex;
@@ -201,9 +161,7 @@
       outline: none;
     }
 
-    input:focus {
-      border-color: var(--green);
-    }
+    input:focus { border-color: var(--green); }
 
     .send {
       background: var(--green);
@@ -215,41 +173,17 @@
       cursor: pointer;
     }
 
-    button:disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
-    }
+    button:disabled { opacity: 0.5; cursor: not-allowed; }
 
-    .note {
-      color: var(--muted);
-      font-size: 11px;
-      line-height: 1.6;
-      margin-bottom: 0;
-    }
+    .note { color: var(--muted); font-size: 11px; line-height: 1.6; margin-bottom: 0; }
 
-    footer {
-      text-align: center;
-      padding: 30px 15px;
-      color: var(--muted);
-      font-size: 12px;
-    }
+    footer { text-align: center; padding: 30px 15px; color: var(--muted); font-size: 12px; }
 
     @media (max-width: 700px) {
-      header {
-        padding: 18px;
-      }
-
-      main {
-        padding: 30px 14px;
-      }
-
-      .layout {
-        grid-template-columns: 1fr;
-      }
-
-      #messages {
-        height: 320px;
-      }
+      header { padding: 18px; }
+      main { padding: 30px 14px; }
+      .layout { grid-template-columns: 1fr; }
+      #messages { height: 320px; }
     }
   </style>
 </head>
@@ -301,10 +235,8 @@
 
         <div id="messages" aria-live="polite">
           <div class="message bot">
-            Hey, welcome to IronFit! 💪
-
-            I'm your AI gym assistant. Tell me your fitness
-            goal, and let's build a smarter training routine.
+            <p>Hey, welcome to IronFit! 💪</p>
+            <p>I'm your AI gym assistant. Tell me your fitness goal, and let's build a smarter training routine.</p>
           </div>
         </div>
 
@@ -329,9 +261,7 @@
             autocomplete="off"
             required
           >
-          <button class="send" id="sendButton" type="submit">
-            Send
-          </button>
+          <button class="send" id="sendButton" type="submit">Send</button>
         </form>
 
         <p class="note">
@@ -350,63 +280,118 @@
     const messages = document.getElementById("messages");
     const sendButton = document.getElementById("sendButton");
 
+    const REQUEST_TIMEOUT_MS = 90000; // server may try several models
+    const MAX_ATTEMPTS = 2;           // 2nd attempt covers Render waking up
+
+    const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+    // Render markdown if the library loaded, otherwise show plain text
+    function setBotContent(el, text) {
+      if (window.marked) {
+        el.innerHTML = marked.parse(text);
+      } else {
+        el.style.whiteSpace = "pre-wrap";
+        el.textContent = text;
+      }
+    }
+
     function addMessage(text, sender) {
       const bubble = document.createElement("div");
       bubble.className = "message " + sender;
-      bubble.innerHTML = marked.parse(text);
+
+      if (sender === "bot") {
+        setBotContent(bubble, text);
+      } else {
+        bubble.textContent = text; // never inject user text as HTML
+      }
+
       messages.appendChild(bubble);
       messages.scrollTop = messages.scrollHeight;
       return bubble;
     }
 
-    async function sendMessage(text) {
+    async function requestAI(message) {
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
+
+      try {
+        const response = await fetch("/api/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message }),
+          signal: controller.signal
+        });
+
+        let data = {};
+        try { data = await response.json(); } catch (e) { /* non-JSON response */ }
+
+        return { ok: response.ok, reply: data.reply };
+      } finally {
+        clearTimeout(timer);
+      }
+    }
+
+    function showFailure(bubble, message) {
+      bubble.textContent = "I couldn't reach your trainer just now. This is usually temporary.";
+
+      const retry = document.createElement("button");
+      retry.type = "button";
+      retry.className = "retry";
+      retry.textContent = "Try again";
+      retry.addEventListener("click", () => {
+        bubble.remove();
+        sendMessage(message, true);
+      });
+
+      bubble.appendChild(document.createElement("br"));
+      bubble.appendChild(retry);
+    }
+
+    async function sendMessage(text, isRetry = false) {
       const message = text.trim();
 
       if (!message || sendButton.disabled) return;
 
-      addMessage(message, "user");
+      if (!isRetry) addMessage(message, "user");
       input.value = "";
       sendButton.disabled = true;
       sendButton.textContent = "...";
 
       const loading = addMessage("IronFit is thinking...", "bot");
+      let result = null;
 
-      try {
-        const response = await fetch("/api/chat", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({ message })
-        });
+      for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+        try {
+          result = await requestAI(message);
+          break;
+        } catch (error) {
+          console.error(`Attempt ${attempt} failed:`, error);
 
-        const data = await response.json();
-
-        if (!response.ok) {
-          throw new Error(data.reply || "Request failed.");
+          if (attempt < MAX_ATTEMPTS) {
+            loading.textContent = "Waking up the server, one moment...";
+            await sleep(4000);
+          }
         }
-
-        loading.textContent = data.reply || "No response received.";
-      } catch (error) {
-        loading.textContent =
-          "Unable to connect to the AI right now. " +
-          "Check that your server is running and your API key is valid.";
-
-        console.error(error);
-      } finally {
-        sendButton.disabled = false;
-        sendButton.textContent = "Send";
-        input.focus();
-        messages.scrollTop = messages.scrollHeight;
       }
+
+      if (result && result.reply) {
+        setBotContent(loading, result.reply); // shows server messages too, even on errors
+      } else {
+        showFailure(loading, message);
+      }
+
+      sendButton.disabled = false;
+      sendButton.textContent = "Send";
+      input.focus();
+      messages.scrollTop = messages.scrollHeight;
     }
 
-    form.addEventListener("submit", function(event) {
+    form.addEventListener("submit", function (event) {
       event.preventDefault();
       sendMessage(input.value);
     });
 
-    document.querySelectorAll("[data-message]").forEach(button => {
+    document.querySelectorAll("[data-message]").forEach((button) => {
       button.addEventListener("click", () => {
         sendMessage(button.dataset.message);
       });

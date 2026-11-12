@@ -251,12 +251,16 @@ Please try again in a minute for a full personalised answer.
 /* ------------------------------------------------------------------ */
 
 async function generateAIResponse(message) {
+    const started = Date.now();
     const key = message.toLowerCase();
     const cached = cacheGet(key);
     if (cached) return { text: cached, source: "cache" };
 
     for (const p of providers) {
         if (isOpen(p.name)) continue;
+
+        // Stop trying after 45s so the user gets an answer instead of waiting
+        if (Date.now() - started > 45000) break;
 
         try {
             console.log(`Trying: ${p.name}`);
